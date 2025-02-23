@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Finder</title>
+</head>
+<body>
+    <form method = 'POST'>
+        <b>Enter Year: </b><input type = 'number' id = 'year' name = 'year'>
+        <button type = 'submit'>Find</button>
+    </form>
+    {% if ans is not none%}
+    <p>{{ans}}</p>
+    {% endif %}
+</body>
+</html>
