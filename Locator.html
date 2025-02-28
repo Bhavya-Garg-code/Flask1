@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loaction Founder</title>
+</head>
+<body>
+    <form id = 'loc_form'>
+        <b>District</b>:<input type = 'text' id = 'dist' name = 'dist'>
+        <button type = 'submit'>Find</button>
+    </form>
+    <p id = 'result'></p>
+    <script>
+        document.getElementById('loc_form').addEventListener('submit', (e)=>{
+            e.preventDefault()
+            let dist = document.getElementById('dist').value;
+            fetch('/locate',{
+                method:'POST',
+                body: new URLSearchParams({dist})
+            }).then(response => response.json()).then(data =>{
+                if(data.error){
+                    document.getElementById('result').innerHTML = data.error;
+                }
+                else{
+                    document.getElementById('result').innerHTML = `State: ${data.state} country : ${data.country}`;
+                }
+            }).catch(error => console.log("Error", error))
+        });
+
+        </script>
+
+</body>
+</html>
