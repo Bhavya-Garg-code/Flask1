@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register </title>
+</head>
+<body>
+    <div class = 'container'>
+        <div class = 'header'>
+            <h2>Register</h2>
+        </div>
+        <div clss = 'form1'>
+            <form action = '/register' method = 'POST'>
+                <div class = 'msg'>{{msg}}</div>
+                <div class = 'inputs'>
+                    <b>Enter Username</b>:<input type = 'text' id = 'username' name = 'username' placeholder = 'Create username'>
+                    <b>Enter Password</b>:<input type = 'password' id = 'password' name = 'password' placeholder = 'Create password'>
+                    <b>Enter email</b>:<input type = 'email' id = 'email' name = 'email' placeholder = 'Create email'>
+                    </div>
+                    <div class = 'btn'>
+                        <button type = 'submit' class = 'btn1'>Register</button>
+                    </div>
+                </div>
+            </form>
+            <p class = 'sign'>Already have an account?<a href = '/login'>Login</p>
+        </div>
+    </div>
+</body>
+</html>
